@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f0e8;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.card {
+  background: #fdfaf5;
+  width: 100%;
+  max-width: 440px;
+  border-radius: 14px;
+  border: 1px solid #e2d9c8;
+  box-shadow: 0 4px 24px rgba(180, 155, 110, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  background: #ede8de;
+  padding: 1.8rem 2rem;
+  border-bottom: 1px solid #e2d9c8;
+}
+
+.card-header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #3b2f1e;
+  margin-bottom: 4px;
+}
+
+.card-header h1 span {
+  color: #a0712a;
+}
+
+.card-header p {
+  font-size: 0.83rem;
+  color: #7a6a55;
+}
+
+form {
+  padding: 1.8rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #5c4a30;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+input,
+textarea {
+  padding: 10px 12px;
+  background: #faf6ee;
+  border: 1px solid #d9cebc;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: #3b2f1e;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #a0712a;
+  box-shadow: 0 0 0 3px rgba(160, 113, 42, 0.1);
+  background: #ffffff;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #c4b49a;
+}
+
+textarea {
+  height: 110px;
+  resize: vertical;
+}
+
+button {
+  padding: 11px;
+  background: #a0712a;
+  color: #fdfaf5;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 4px 12px rgba(160, 113, 42, 0.2);
+}
+
+button:hover {
+  background: #8a5e22;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(160, 113, 42, 0.3);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#result {
+  font-size: 0.84rem;
+  text-align: center;
+  border-radius: 8px;
+  display: none;
+  padding: 0.65rem;
+}
+
+#result.success {
+  display: block;
+  background: #f6f0e4;
+  color: #5c4a30;
+  border: 1px solid #d9cebc;
+}
+
+#result.error {
+  display: block;
+  background: #fdf5ee;
+  color: #8b3a1a;
+  border: 1px solid #f0c9a8;
+}
