@@ -26,7 +26,7 @@ document.getElementById('contactForm').addEventListener('submit', async function
 
     await res.text();
 
-    result.textContent = '✅ Message saved to database successfully!';
+    result.textContent = 'Contact Form Submitted Successfully!';
     result.className = 'success';
     result.style.display = 'block';
     this.reset();
