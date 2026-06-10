@@ -19,8 +19,6 @@ public class Contact {
     @Column(nullable = false, length = 1000)
     private String message;
 
-    // ── Getters & Setters ──────────────────────────────────────────
-
     public Long getId() {
         return id;
     }

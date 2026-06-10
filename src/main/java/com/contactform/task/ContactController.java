@@ -36,7 +36,6 @@ public class ContactController {
         return "Form submitted successfully!";
     }
 
-    // ── GET /contacts  →  return all stored contacts as JSON ───────
     @GetMapping("/contacts")
     public List<Contact> getAllContacts() {
         return repo.findAll();
