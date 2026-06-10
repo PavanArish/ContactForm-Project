@@ -37,10 +37,6 @@ body {
   margin-bottom: 4px;
 }
 
-.card-header h1 span {
-  color: #a0712a;
-}
-
 .card-header p {
   font-size: 0.83rem;
   color: #7a6a55;

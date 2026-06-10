@@ -7,9 +7,9 @@ document.getElementById('contactForm').addEventListener('submit', async function
   const result  = document.getElementById('result');
   const btn     = document.getElementById('submitBtn');
 
-  // reset result box
+  // Reset result box
   result.textContent = '';
-  result.removeAttribute('class');
+  result.className = '';
   result.style.display = 'none';
 
   btn.disabled = true;
@@ -22,32 +22,19 @@ document.getElementById('contactForm').addEventListener('submit', async function
       body: new URLSearchParams({ name, email, message }).toString()
     });
 
+    if (!res.ok) throw new Error('Server error');
+
     await res.text();
 
-    // show success
-    result.textContent = '✅ Contact Form Submitted Successfully!';
+    result.textContent = '✅ Message saved to database successfully!';
+    result.className = 'success';
     result.style.display = 'block';
-    result.style.padding = '0.65rem';
-    result.style.borderRadius = '8px';
-    result.style.fontSize = '0.84rem';
-    result.style.textAlign = 'center';
-    result.style.background = '#f6f0e4';
-    result.style.color = '#5c4a30';
-    result.style.border = '1px solid #d9cebc';
     this.reset();
 
   } catch (err) {
-
-    // show error
     result.textContent = '❌ Could not connect. Is Spring Boot running on port 8080?';
+    result.className = 'error';
     result.style.display = 'block';
-    result.style.padding = '0.65rem';
-    result.style.borderRadius = '8px';
-    result.style.fontSize = '0.84rem';
-    result.style.textAlign = 'center';
-    result.style.background = '#fdf5ee';
-    result.style.color = '#8b3a1a';
-    result.style.border = '1px solid #f0c9a8';
 
   } finally {
     btn.disabled = false;
