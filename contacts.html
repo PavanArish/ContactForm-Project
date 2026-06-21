@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Management Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css"/>
+</head>
+<body>
+
+  <div class="dashboard">
+    <div class="dashboard-header">
+      <h1>Contact Management Dashboard</h1>
+      <p>All submitted contact form entries</p>
+      <button id="refreshBtn">Refresh</button>
+    </div>
+
+    <div id="loading">Loading contacts...</div>
+    <div id="error" class="error-box"></div>
+
+    <table id="contactsTable">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Message</th>
+        </tr>
+      </thead>
+      <tbody id="contactsBody">
+        <!-- rows inserted by JS -->
+      </tbody>
+    </table>
+
+    <div id="emptyState" class="empty-state">No contacts submitted yet.</div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
